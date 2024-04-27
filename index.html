@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="calendar">
+        <div class="header">
+            <h1>2024년 5월 정형외과 당직</h1>
+        </div>
+    </div>
+        <div id="calendarGrid" class="calendar-grid-container"></div>
+        <button onclick="exportToCSV()">Export to CSV</button>
+        <button onclick="saveToFile()">Save to File</button>
+        <input type="file" id="fileInput" onchange="loadFromFile(event)">
+    <script src="script.js"></script>
+</body>
+</html>
