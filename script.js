@@ -109,6 +109,22 @@ function loadFromFile(event) {
     };
     reader.readAsText(file);
 }
+function adjustInputFontSize() {
+    // 뷰포트의 너비 가져오기
+    const viewportWidth = window.innerWidth;
+
+    // 입력 창의 글씨 크기 조절
+    const inputFontSize = Math.max(5, Math.min(10, viewportWidth / 30)); // 최소 10px, 최대 20px로 제한
+    const inputElements = document.querySelectorAll('.cell input[type="text"]');
+    inputElements.forEach(input => {
+        input.style.fontSize = inputFontSize + 'px';
+    });
+}
+
+// 페이지 로드 시 및 창 크기 변경 시 함수 호출
+window.addEventListener('DOMContentLoaded', adjustInputFontSize);
+window.addEventListener('resize', adjustInputFontSize);
+
 
 // 페이지 로드 시 로컬 스토리지에서 데이터 불러오기
 window.onload = function() {
