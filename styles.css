@@ -25,6 +25,6 @@
 /* 미디어 쿼리를 사용하여 모바일 장치에 대한 스타일 지정 */
 @media only screen and (max-width: 600px) {
     .cell input[type="text"] {
-        font-size: 14px; /* 모바일 장치에서 폰트 크기를 줄임 */
+        font-size: 9px; /* 모바일 장치에서 폰트 크기를 줄임 */
     }
 }
